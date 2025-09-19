@@ -1,0 +1,33 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Task Management App Design</title>
+      <script type="module" crossorigin src="/assets/index-Do8PujDe.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-C7i06GuI.css">
+    </head>
+
+    <body>
+      <div id="root"></div>
+          <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script>
+      const supabase = supabase.createClient(
+        "https://pxghaxvfujnbzpdyxjyz.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4Z2hheHZmdWpuYnpwZHl4anl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNzU5OTIsImV4cCI6MjA3Mzg1MTk5Mn0.zj-UyK7RKjtXXzd0BaGXMQnfIDy2yoYseQ0gRN5_dwI"
+      );
+    
+      // Example test: Fetch data from a Supabase table
+      async function testSupabase() {
+        const { data, error } = await supabase.from('kv_store_7ddd31f8').select();
+        console.log("Data:", data);
+        if (error) console.error("Supabase error:", error);
+      }
+    
+      testSupabase();
+    </script>
+    </body>
+  </html>
+  
